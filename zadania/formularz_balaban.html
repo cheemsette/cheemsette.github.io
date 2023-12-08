@@ -1,13 +1,44 @@
 
 <!DOCTYPE html>
 <html lang="pl-PL">
-<html>
-<head>
-<meta charset="utf-8">
-<title> Formularz Bałaban </title>
-</head>
-<body bgcolor="#DCDCDC">
-<center><h1>tu bedize formularz</h1></center>
-<a href="index.html">Powrót</a>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title> Formularz Bałaban </title>
+  </head>
+  <body style="background-color:#CEDE8E;">
+    <h1 align="center">Reklamacja produktu</h1>
+    <form>
+        <div>
+          <div style="float:left;">
+            <label for="fname">Imie:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Nazwisko:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+          </div>
+          <div style="float:left; margin-left:25%;">
+            <label for="typ">Powod reklamacji:</label><br>
+            <input type="radio" id="uszkodzenie" name="powod" value="Uszkodzenie">
+            <label for="powod">Uszkodzenie</label><br>
+            <input type="radio" id="zamiana" name="powod" value="Zamiana">
+            <label for="zamiana">Zamiana</label><br>
+            <input type="radio" id="inne" name="powod" value="Inne">
+            <label for="inne">Inne</label><br><br>
+          </div>
+          <div style="float:left; clear:both;">
+            <label for="produkt">Typ reklamowanego produktu:</label><br>
+            <input type="checkbox" id="komputer" name="komputer" value="komputer">
+            <label for="vehicle1"> Komputer</label><br>
+            <input type="checkbox" id="laptop" name="laptop" value="laptop">
+            <label for="vehicle2"> Laptop</label><br>
+            <input type="checkbox" id="telefon" name="telefon" value="telefon">
+            <label for="vehicle2"> Telefon</label><br>
+          </div>
+          <div style="float:left; margin-left:22%;">
+            <input type="submit" value="Wyślij"><br>
+        	  <p>Alan Bałaban 2Kg1</p>
+            <p>Kolor tła: #CEDE8E</p>
+          </div>
+        </div>
+      </form>
+  </body>
 </html>
