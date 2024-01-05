@@ -8,7 +8,7 @@ class _app {
   backgroundToggler = false;
   shouldIgnoreVideo = false;
   effects = ['bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'jello'];
-  brandDescription = ['programmer', 'pro hacker 1337'];
+  brandDescription = ['programmer', 'zse', '3d modelling'];
 
   titleChanger = (text, delay) => {
     if (!text) return;
