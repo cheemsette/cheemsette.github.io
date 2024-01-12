@@ -43,6 +43,7 @@ $(document).ready(() => {
 
   app.titleChanger(['cheems', 'zse', '2021-2024', '2K', '3d modelling', 'app design', 'programming', 'exploiting']);
   app.iconChanger(['assets/icons/roses/rose1.jpg', 'assets/icons/roses/rose2.jpg', 'assets/icons/roses/rose3.jpg', 'assets/icons/roses/rose4.jpg', 'assets/icons/roses/rose5.jpg', 'assets/icons/roses/rose6.jpg', 'assets/icons/roses/rose7.jpg', 'assets/icons/roses/rose8.jpg', 'assets/icons/roses/rose1.jpg']);
+  skipIntro();
 });
 
 if ($.cookie('videoTime')) {
