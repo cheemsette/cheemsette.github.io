@@ -85,6 +85,29 @@ document.body.onkeyup = (event) => {
   }
 };
 
+$('html').on('contextmenu', (event) => {
+  const img = document.createElement('img');
+
+  const trollfaceLight = app.skippedIntro ? '' : 'trollface-light';
+
+  img.src = 'assets/others/trollface.jpg';
+  img.width = 64;
+  img.height = 64;
+  img.alt = 'obnoxious.club';
+  img.style = `position: absolute; left: ${event.pageX}px; top: ${event.pageY}px; z-index: 10`;
+  img.className = `troll ${trollfaceLight}`;
+
+  document.body.appendChild(img);
+});
+
+setInterval(() => {
+  $('.troll').remove();
+}, 600);
+
+$('.skip').click(() => {
+  skipIntro();
+});
+
 $('.skip').click(() => {
   skipIntro();
 });
@@ -100,6 +123,20 @@ $.fn.extend({
     return this;
   },
 });
+
+const writeLine = (text, speed, timeout, callback) => {
+  timeout = typeof timeout === 'number' ? timeout : [0, (callback = timeout)];
+
+  const lineNumber = app.id !== 2 ? ++app.id : (app.id += 2);
+
+  setTimeout(() => {
+    const typed = new Typed(`#line${lineNumber}`, {
+      strings: text,
+      typeSpeed: speed,
+      onComplete: callback,
+    });
+  }, timeout);
+};
 
 const writeLine = (text, speed, timeout, callback) => {
   timeout = typeof timeout === 'number' ? timeout : [0, (callback = timeout)];
